@@ -23,15 +23,17 @@ app.listen(PORT, function () {
 	)
 })
 
-console.log(path.join(__dirname, '../public'))
-
+//sends back terminal_info page html file
 app.get("/terminal_info", terminal_info)
 
 function terminal_info(req, res, next) {
 
-	var pathName = path.join(__dirname, '../public', 'terminal_info.html')
-	res.sendFile('terminal_info.html', { root: path.join(__dirname, '../public') });
+	res.sendFile('terminal_info.html', { root: path.join(__dirname, '../public/views') });
 
 }
+
+
+
+
 
 

@@ -4,7 +4,8 @@
   "description": "setup for connecting to a mongodb atlas cluster",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=development nodemon --watch ./backend ./backend/server.js"
+    "dev": "NODE_ENV=development nodemon --watch ./backend ./backend/server.js",
+    "start": "node ./backend/server.js"
   },
   "author": "jamesjsewell",
   "license": "ISC",

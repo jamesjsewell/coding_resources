@@ -23,12 +23,21 @@ app.listen(PORT, function () {
 	)
 })
 
+var views = { root: path.join(__dirname, '../public/views') }
+
 //sends back terminal_info page html file
 app.get("/terminal_info", terminal_info)
+app.get("/", main_page)
+
+function main_page(req, res, next){
+
+	res.sendFile('main_page.html', views)
+
+}
 
 function terminal_info(req, res, next) {
 
-	res.sendFile('terminal_info.html', { root: path.join(__dirname, '../public/views') });
+	res.sendFile('terminal_info.html', views);
 
 }
 
